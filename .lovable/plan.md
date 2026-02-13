@@ -1,13 +1,11 @@
-
-
 # Movimiento Vecinal Escobar — Website
 
-A single-page corporate website for the Escobar Neighborhood Association, fully in Spanish, using dark green and white as primary colors inspired by the uploaded logo.
+A single-page corporate website for the Escobar Neighborhood Association, fully in Spanish, using dark green and white as primary colors inspired by the uploaded logo. Must be a static page.
 
 ---
 
 ## Design & Theme
-- **Color palette**: Dark green (`#1B4332` range) as primary, white for text/backgrounds, light green accents inspired by the leaf icon in the logo
+- **Color palette**: Dark green (`#06402A` range) as primary, white for text/backgrounds, light green accents
 - **Typography**: Clean, bold sans-serif headings; readable body text
 - **Style**: Professional, institutional, trustworthy feel
 - The uploaded logo will be used in the header and footer
@@ -57,10 +55,9 @@ A single-page corporate website for the Escobar Neighborhood Association, fully 
 ### 6. Participá (Get Involved)
 - Contact/volunteer form with fields: Nombre, Localidad, Teléfono, ¿Querés ser voluntario? (checkbox)
 - Direct WhatsApp button (placeholder link)
-- Social media icon links (Instagram, Facebook, Twitter — placeholder URLs)
 
 ### 7. Footer
 - Dark green background
-- Logo, contact info (email, phone — placeholder), social media links
+- Logo, contact info (email, phone — placeholder)
+- Social media icon links (Instagram, Facebook, Twitter — placeholder URLs)
 - Copyright notice
-
