@@ -17,13 +17,13 @@ const Hero = () => {
           Participación real. Comunidad activa. Gestión transparente.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-heading font-bold">
+          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground font-heading font-bold">
             <a href="#participa">Sumate</a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-heading font-bold">
+          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground font-heading font-bold">
             <a href="#escobar-impulsa">Propuestas</a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-heading font-bold">
+          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground font-heading font-bold">
             <a href="#contacto">Contacto</a>
           </Button>
         </div>
