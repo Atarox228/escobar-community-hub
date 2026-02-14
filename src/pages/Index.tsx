@@ -11,14 +11,12 @@ const Index = () => {
   return (
     <div className="min-h-screen font-body">
       <Header />
-      <main>
         <Hero />
         <QuienesSomos />
         <Valores />
         <EscobarPiensa />
         <EscobarImpulsa />
         <Participa />
-      </main>
       <Footer />
     </div>
   );
