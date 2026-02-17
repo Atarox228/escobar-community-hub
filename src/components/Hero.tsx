@@ -20,17 +20,6 @@ const Hero = () => {
         <p className="font-body text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto italic">
           Espacio de participación plural para la articulación entre vecinos e instituciones locales.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground hover:border-2 hover:border-primary-foreground font-heading font-bold">
-            <a href="#participa">Sumate</a>
-          </Button>
-          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground hover:border-2 hover:border-primary-foreground font-heading font-bold">
-            <a href="#valores">Valores</a>
-          </Button>
-          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground hover:border-2 hover:border-primary-foreground font-heading font-bold">
-            <a href="#contacto">Contacto</a>
-          </Button>
-        </div>
       </div>
     </section>
   );

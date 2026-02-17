@@ -3,7 +3,7 @@ export const navLinks = [
   { label: "Quiénes Somos", href: "#quienes-somos" },
   { label: "Valores", href: "#valores" },
   { label: "Escobar Piensa", href: "#escobar-piensa" },
-  { label: "Escobar Impulsa", href: "#escobar-impulsa" },
+  { label: "Mujeres Escobarenses", href: "#mujeres-escobarenses" },
   { label: "Participá", href: "#participa" },
   { label: "Contacto", href: "#contacto" },
 ] as const;
