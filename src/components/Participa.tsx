@@ -1,4 +1,3 @@
-// src/components/sections/Participa.tsx
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -8,18 +7,23 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { siteConfig } from "@/config/site";
-import { toast } from "sonner";
 
 // Schema de validación
 const contactSchema = z.object({
-  nombre: z.string()
+  nombre: z
+    .string()
     .min(2, "El nombre debe tener al menos 2 caracteres")
     .max(50, "El nombre no puede exceder 50 caracteres"),
-  localidad: z.string()
+  localidad: z
+    .string()
     .min(2, "La localidad debe tener al menos 2 caracteres")
     .max(50, "La localidad no puede exceder 50 caracteres"),
-  telefono: z.string()
-    .regex(/^[\d\s\+\-()]+$/, "El teléfono solo puede contener números, espacios, +, - y paréntesis")
+  telefono: z
+    .string()
+    .regex(
+      /^[\d\s\+\-()]+$/,
+      "Solo puede contener números, espacios, +, - y paréntesis"
+    )
     .min(8, "El teléfono debe tener al menos 8 dígitos"),
   voluntario: z.boolean().default(false),
 });
@@ -46,26 +50,26 @@ const Participa = () => {
 
   const voluntarioValue = watch("voluntario");
 
-  const onSubmit = async (data: ContactFormData) => {
-    try {
-      // Aquí irá tu lógica de envío (API, email, etc.)
-      console.log("Datos del formulario:", data);
-      
-      // Simular envío
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      // Mostrar toast de éxito
-      toast.success("¡Gracias por tu interés!", {
-        description: "Nos pondremos en contacto pronto.",
-      });
-      
-      // Resetear formulario
-      reset();
-    } catch (error) {
-      toast.error("Error al enviar", {
-        description: "Por favor, intenta nuevamente.",
-      });
-    }
+  const onSubmit = (data: ContactFormData) => {
+    // Construir el mensaje para WhatsApp
+    const mensaje = [
+      "🏘️ *Movimiento Vecinal Escobar*",
+      "Nueva consulta desde el sitio web:",
+      "",
+      `👤 *Nombre:* ${data.nombre}`,
+      `📍 *Localidad:* ${data.localidad}`,
+      `📞 *Teléfono:* ${data.telefono}`,
+      `🙋 *Quiere ser voluntario/a:* ${data.voluntario ? "Sí" : "No"}`,
+    ].join("\n");
+
+    // Codificar el mensaje y armar la URL
+    const url = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(url, "_blank", "noopener,noreferrer");
+
+    // Resetear el formulario
+    reset();
   };
 
   return (
@@ -77,12 +81,15 @@ const Participa = () => {
         <p className="font-body text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Sumate al movimiento. Completá el formulario y formá parte del cambio.
         </p>
-        
+
         <div className="max-w-lg mx-auto space-y-8">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             {/* Nombre */}
             <div>
-              <Label htmlFor="nombre" className="font-heading font-semibold text-foreground">
+              <Label
+                htmlFor="nombre"
+                className="font-heading font-semibold text-foreground"
+              >
                 Nombre <span className="text-destructive">*</span>
               </Label>
               <Input
@@ -100,7 +107,10 @@ const Participa = () => {
 
             {/* Localidad */}
             <div>
-              <Label htmlFor="localidad" className="font-heading font-semibold text-foreground">
+              <Label
+                htmlFor="localidad"
+                className="font-heading font-semibold text-foreground"
+              >
                 Localidad <span className="text-destructive">*</span>
               </Label>
               <Input
@@ -118,7 +128,10 @@ const Participa = () => {
 
             {/* Teléfono */}
             <div>
-              <Label htmlFor="telefono" className="font-heading font-semibold text-foreground">
+              <Label
+                htmlFor="telefono"
+                className="font-heading font-semibold text-foreground"
+              >
                 Teléfono <span className="text-destructive">*</span>
               </Label>
               <Input
@@ -139,10 +152,12 @@ const Participa = () => {
               <Checkbox
                 id="voluntario"
                 checked={voluntarioValue}
-                onCheckedChange={(checked) => setValue("voluntario", !!checked)}
+                onCheckedChange={(checked) =>
+                  setValue("voluntario", !!checked)
+                }
               />
-              <Label 
-                htmlFor="voluntario" 
+              <Label
+                htmlFor="voluntario"
                 className="font-body text-foreground cursor-pointer"
               >
                 ¿Querés ser voluntario/a?
@@ -150,33 +165,16 @@ const Participa = () => {
             </div>
 
             {/* Botón de envío */}
-            <Button 
-              type="submit" 
-              size="lg" 
-              className="w-full font-heading font-bold"
+            <Button
+              type="submit"
+              size="lg"
+              className="w-full font-heading font-bold gap-2"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Enviando..." : "Enviar"}
+              <MessageCircle size={20} />
+              {isSubmitting ? "Abriendo WhatsApp..." : "Enviar por WhatsApp"}
             </Button>
           </form>
-
-          {/* Botón de WhatsApp */}
-          <div className="text-center">
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-[#25D366] hover:bg-[#25D366]/90 text-white font-heading font-bold gap-2"
-            >
-              <a 
-                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <MessageCircle size={20} />
-                Contactanos por WhatsApp
-              </a>
-            </Button>
-          </div>
         </div>
       </div>
     </section>
