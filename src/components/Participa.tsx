@@ -53,13 +53,13 @@ const Participa = () => {
   const onSubmit = (data: ContactFormData) => {
     // Construir el mensaje para WhatsApp
     const mensaje = [
-      "🏘️ *Movimiento Vecinal Escobar*",
+      "*Movimiento Vecinal Escobar*",
       "Nueva consulta desde el sitio web:",
       "",
-      `👤 *Nombre:* ${data.nombre}`,
-      `📍 *Localidad:* ${data.localidad}`,
-      `📞 *Teléfono:* ${data.telefono}`,
-      `🙋 *Quiere ser voluntario/a:* ${data.voluntario ? "Sí" : "No"}`,
+      `*Nombre:* ${data.nombre}`,
+      `*Localidad:* ${data.localidad}`,
+      `*Teléfono:* ${data.telefono}`,
+      `*Quiere ser voluntario/a:* ${data.voluntario ? "Sí" : "No"}`,
     ].join("\n");
 
     // Codificar el mensaje y armar la URL
