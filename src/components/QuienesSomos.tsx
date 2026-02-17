@@ -1,4 +1,4 @@
-import { Users, Target } from "lucide-react";
+import { Users, Target } from "@/lib/icons";
 
 const QuienesSomos = () => {
   return (
@@ -14,10 +14,19 @@ const QuienesSomos = () => {
               <h3 className="font-heading text-xl font-bold text-foreground">¿Qué es el movimiento?</h3>
             </div>
             <p className="font-body text-muted-foreground leading-relaxed">
-              El Movimiento Vecinal Escobar es una organización comunitaria comprometida con el desarrollo sostenible y la participación ciudadana en el partido de Escobar. Nacimos como una respuesta a la necesidad de los vecinos de contar con una voz activa en las decisiones que afectan a nuestra comunidad.
+              El Movimiento Vecinal Escobar es una organización de vecinos que entiende la política en su 
+              sentido más antiguo y noble: como cosa pública (res publica). No nacimos para administrar cargos, 
+              sino para custodiar el interés común,y defender lo que es de cada escobarense.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              Creemos en la gestión transparente, el diálogo permanente y la construcción colectiva de soluciones para los desafíos que enfrenta nuestra ciudad.
+              Creemos que una comunidad se construye desde la virtud cívica: responsabilidad, valentía, 
+              honestidad y compromiso con el territorio que habitamos. Nuestra ciudad es un cuerpo vivo que se 
+              cuida o se degrada según la conducta de sus ciudadanos.
+            </p>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              Nuestro movimiento apuesta a una gestión transparente, al conflicto de ideas sin odio, al pluralismo 
+              real y al diálogo como práctica republicana: no para diluir diferencias, sino para ordenarlas al 
+              servicio del bien común.
             </p>
           </div>
           <div className="space-y-4">
@@ -26,10 +35,19 @@ const QuienesSomos = () => {
               <h3 className="font-heading text-xl font-bold text-foreground">¿Por qué surgimos?</h3>
             </div>
             <p className="font-body text-muted-foreground leading-relaxed">
-              Surgimos de la convicción de que los vecinos y vecinas de Escobar merecen ser protagonistas de su propio futuro. Ante la falta de espacios de participación genuina, decidimos organizarnos para generar propuestas concretas y viables.
+              Surgimos de una certeza simple y profunda:
+              cuando los vecinos se retiran de la vida pública, la comunidad se vuelve rehén de intereses
+              ajenos al bien común y se cae en intereses que no nos pertenecen.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              Nuestro objetivo es construir una comunidad más justa, segura y próspera, donde cada vecino pueda contribuir activamente al bienestar de todos.
+              En Escobar, decidimos educar al ciudadano como actor político, no como espectador pasivo.
+              Creemos en la comunidad como sujeto político, en la deliberación pública, en la construcción
+              paciente de propuestas concretas y posibles, arraigadas en la realidad de nuestra bella ciudad.
+            </p>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              Nuestro objetivo es republicano en el sentido clásico:
+              una comunidad justa en sus normas, segura en su orden y próspera en su horizonte, donde
+              cada vecino sea un custodio activo de lo común.
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import logo from "@/assets/logo.jpeg";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
 
 const Hero = () => {
   return (
@@ -11,17 +12,20 @@ const Hero = () => {
           className="mx-auto mb-8 h-32 w-32 rounded-full object-cover border-4 border-primary-foreground/20 shadow-xl"
         />
         <h1 className="font-heading text-4xl md:text-6xl font-extrabold text-primary-foreground mb-4">
-          Movimiento Vecinal Escobar
+          {siteConfig.name}
         </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto italic">
-          Participación real. Comunidad activa. Gestión transparente.
+          El disenso construye democracia
+        </p>
+        <p className="font-body text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto italic">
+          Espacio de participación plural para la articulación entre vecinos e instituciones locales.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground hover:border-2 hover:border-primary-foreground font-heading font-bold">
             <a href="#participa">Sumate</a>
           </Button>
           <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground hover:border-2 hover:border-primary-foreground font-heading font-bold">
-            <a href="#escobar-impulsa">Propuestas</a>
+            <a href="#valores">Valores</a>
           </Button>
           <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary hover:text-primary-foreground hover:border-2 hover:border-primary-foreground font-heading font-bold">
             <a href="#contacto">Contacto</a>

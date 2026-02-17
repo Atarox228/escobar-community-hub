@@ -3,22 +3,26 @@ import Hero from "@/components/Hero";
 import QuienesSomos from "@/components/QuienesSomos";
 import Valores from "@/components/Valores";
 import EscobarPiensa from "@/components/EscobarPiensa";
-import EscobarImpulsa from "@/components/EscobarImpulsa";
+import MujeresEscobarenses from "@/components/MujeresEscobarenses";
 import Participa from "@/components/Participa";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
-    <div className="min-h-screen font-body">
-      <Header />
-        <Hero />
-        <QuienesSomos />
-        <Valores />
-        <EscobarPiensa />
-        <EscobarImpulsa />
-        <Participa />
-      <Footer />
-    </div>
+    <>
+      <SEO />
+      <div className="min-h-screen font-body">
+        <Header />
+          <Hero />
+          <QuienesSomos />
+          <Valores />
+          <EscobarPiensa />
+          <MujeresEscobarenses />
+          <Participa />
+        <Footer />
+      </div>
+    </>
   );
 };
 

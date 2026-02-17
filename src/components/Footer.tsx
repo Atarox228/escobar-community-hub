@@ -1,5 +1,6 @@
 import logo from "@/assets/logo.jpeg";
-import { Instagram, Facebook, Twitter, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Youtube,Linkedin, Mail, Phone } from "@/lib/icons";
+import { siteConfig } from "@/config/site";
 
 const Footer = () => {
   return (
@@ -10,18 +11,18 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-3">
             <img src={logo} alt="Logo" className="h-14 w-14 rounded-full object-cover border-2 border-primary-foreground/20" />
             <span className="font-heading text-lg font-bold text-primary-foreground">
-              Movimiento Vecinal Escobar
+              {siteConfig.name}
             </span>
           </div>
 
           {/* Contact */}
           <div className="text-center md:text-left space-y-3">
             <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider">Contacto</h4>
-            <a href="mailto:contacto@movimientovecinal.org" className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-              <Mail size={16} /> contacto@movimientovecinal.org
+            <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              <Mail size={16} /> {siteConfig.contact.email}
             </a>
-            <a href="tel:+5491100000000" className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-              <Phone size={16} /> +54 9 11 0000 0000
+            <a href={`mailto:${siteConfig.contact.phone}`} className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              <Phone size={16} /> {siteConfig.contact.phone}
             </a>
           </div>
 
@@ -29,14 +30,17 @@ const Footer = () => {
           <div className="text-center md:text-right space-y-3">
             <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider">Redes Sociales</h4>
             <div className="flex justify-center md:justify-end gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Instagram">
+              <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Instagram">
                 <Instagram size={22} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Facebook">
+              <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Facebook">
                 <Facebook size={22} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Twitter">
-                <Twitter size={22} />
+              <a href={siteConfig.social.youtube} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Youtube">
+                <Youtube size={22} />
+              </a>
+              <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Linkedin">
+                <Linkedin size={22} />
               </a>
             </div>
           </div>

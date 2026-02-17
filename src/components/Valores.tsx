@@ -1,14 +1,5 @@
-import { Eye, Users, Shield, BookOpen, TrendingUp, Leaf } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const valores = [
-  { icon: Eye, title: "Transparencia", desc: "Gestionamos con honestidad y rendimos cuentas a la comunidad. Cada acción y decisión es pública y accesible para todos los vecinos." },
-  { icon: Users, title: "Participación ciudadana", desc: "Promovemos espacios de diálogo y construcción colectiva donde cada vecino tiene voz y voto en las decisiones que nos afectan." },
-  { icon: Shield, title: "Seguridad", desc: "Trabajamos por un Escobar más seguro, impulsando políticas preventivas y colaboración entre vecinos y autoridades." },
-  { icon: BookOpen, title: "Cultura y educación", desc: "Fomentamos el acceso a la cultura y la educación como pilares fundamentales para el desarrollo de nuestra comunidad." },
-  { icon: TrendingUp, title: "Desarrollo local", desc: "Impulsamos el crecimiento económico y social de Escobar, apoyando emprendedores locales y proyectos productivos." },
-  { icon: Leaf, title: "Cuidado ambiental", desc: "Protegemos nuestros espacios verdes y promovemos prácticas sustentables para las generaciones futuras." },
-];
+import { valores } from "@/data/valores";
 
 const Valores = () => {
   return (
