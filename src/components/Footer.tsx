@@ -27,21 +27,16 @@
                 Contacto
               </h4>
 
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-              >
+              <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70">
                 <Mail size={16} />
                 {siteConfig.contact.email}
-              </a>
+              </div>
 
-              <a
-                href={`https://wa.me/${siteConfig.contact.phone}`}
-                className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-              >
+              <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-primary-foreground/70">
                 <Phone size={16} />
                 {siteConfig.contact.phone}
-              </a>
+              </div>
+
             </div>
 
             {/* Hecho por */}
